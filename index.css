@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #8bd1ed;
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 20vh;
+}
+main{
+    height: 60vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.house {
+    position: relative;
+    /* width: 300px; */
+}
+.base {
+    width: 424px;
+    height: 311px;
+    background-color: #DEB887;
+    position: relative;
+    /* border: 2px solid #8B4513; */
+}
+.roof {
+    position: absolute;
+    top: -138px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 212px solid transparent;
+    border-right: 212px solid transparent;
+    border-bottom: 139px solid #8B4513;
+    z-index: 2;
+}
+.window {
+    width: 100px;
+    height: 100px;
+    background-color: #ADD8E6;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    left: 92px;
+    border: 2px solid #000;
+}
+.window::before, .window::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+}
+.window::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-1px);
+}
+.window::after {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-1px);
+}
+.chimney {
+    width: 37px;
+    height: 89px;
+    background-color: #A0522D;
+    position: absolute;
+    top: -121px;
+    right: 50px;
+}
+.door {
+    width: 104px;
+    height: 231px;
+    background-color: #8B4513;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    border: 2px solid #000;
+}
+.door::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 115px;
+    left: 88px;
+}
+.sun {
+    width: 60px;
+    height: 60px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    box-shadow: 0 0 30px #FFD700;
+}
+footer {
+height: 20vh;
+width: 100%;
+background-color: #2E8B57;
+}
+@media (max-width: 422px) {
+    .base {
+        width: 320px;
+        height: 230px;
+    }
+    .roof {
+        top: -115px;
+        border-left: 161px solid transparent;
+        border-right: 160px solid transparent;
+        border-bottom: 117px solid #8B4513;
+    }
+    .chimney {
+        width: 32px;
+        height: 69px;
+        top: -97px;
+        right: 50px;
+    }
+    .door {
+        width: 81px;
+        height: 163px;
+        bottom: 0;
+        right: 20px;
+    }
+    .door::after {
+        top: 70px;
+        left: 67px;
+    }
+    .window {
+        width: 75px;
+        height: 75px;
+    }
+    
+}
